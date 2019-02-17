@@ -4,13 +4,17 @@
 -------------------------------------------------------------*/
 * { box-sizing: border-box; }
 html{
-  font-size: 62.5%
+  font-size: 62.5%;
+  transition: all;
+  transition-timing-function: ease;
 }
 
 body {
   font-size: 14px;
   line-height: 150%;
   overflow-x: hidden;
+  transition: all;
+  transition-timing-function: ease;
 }
 
 .sp { display: none; }
@@ -118,14 +122,54 @@ a:hover {
 
 /* footer 
 -------------------------------------------------------------*/
-#footer {  }
+#footer {
+  background-color: var(--colorPinkBg);
+  min-height: 24.5rem;
+  display: flex;
+  align-items: center;
+}
+#footer a:hover {
+  text-decoration: none;
+  opacity: .7;
+}
+.footer__box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0!important;
+}
+.footer__block:nth-child(2) { 
+  width: 50%;
+  display: flex;
+  justify-content: center
+}
+.footer__block-list { width: 50%; }
+.footer__block:first-child {width: 20%}
+.footer__block:last-child { width: 25%; }
+#footer .item { margin: 1rem 0;}
+#footer .item-link { color: var(--colorBlack)!important; }
+
+#footer .item-link i { margin-right: .5rem}
+.footer__block:last-child .footer-btn{
+  display: flex;
+  width: 100%;
+  margin: 1rem;
+  background-color: black;
+  border: unset;
+  font-size: 1.6rem;
+  color: var(--colorWhite)!important;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+}
 
 /* layout 
 -------------------------------------------------------------*/
-/* .contents { 
-  margin: 0 15rem;
-  padding : 0 5rem;
-} */
+.contents { 
+  /* height: auto; */
+  position: relative;
+}
 .box { padding: 0 20rem 8rem 20rem;}
 .box__title {
   display: block;
@@ -210,9 +254,7 @@ a:hover {
   justify-content: space-between;
   padding-bottom: 3.5rem;
 }
-.comment__block:nth-child(3) .comment__block-img {
-  order: 1;
-}
+.comment__block:nth-child(3) .comment__block-img { order: 1; }
 .comment__block-img { 
   display: flex;
   flex-direction: column;
@@ -229,17 +271,27 @@ a:hover {
   font-weight: 600;
   border-radius: 35px;
   position: relative;
+  z-index: 2;
 }
-
-/* .comment__block-text::before{
+.comment__block-text span {
+  position: relative;
+  z-index: 3;
+}
+.comment__block:nth-child(3) .comment__block-text::before {
+  left: 96%;
+  transform: skewX(-45deg);
+}
+.comment__block-text::before{
   content: '';
-  background-color: navy;
-  width: 30px;
-  height: 30px;
-  top: -10px;
-  left: 0;
+  background-color: var(--colorWhite);
+  width: 50px;
+  height: 50px;
+  top: 30%;
+  left: -3%;
   position: absolute;
-} */
+  transform: skewX(45deg);
+  z-index: 1;
+}
 /* Comment 
 -------------------------------------------------------------*/
 
@@ -247,6 +299,7 @@ a:hover {
 .product__block {
   display: flex;
   margin-top: 1.5rem;
+  flex-grow: 1;
 }
 .product__img {
   width: 55%;
@@ -283,6 +336,9 @@ a:hover {
 .next { right: -10%;}
 .product__img-slide:hover .prev { left: 0;}
 .product__img-slide:hover .next { right: 0;}
+.product__img-slide .slideCurrent:nth-child(2), 
+.product__img-slide .slideCurrent:nth-child(3),
+.product__img-slide .slideCurrent:nth-child(4) { display: none;}
 .product__img-list {
   height: 15%;
   display: flex;
@@ -297,7 +353,7 @@ a:hover {
 .img-item img {
   width: 100%
 }
-.product__img-list .acitve {
+.acitveProduct {
   border: 2px solid #72bbdb;
 }
 .product__booking { padding: 3rem 2rem; }
@@ -433,7 +489,7 @@ a:hover {
   height: 14rem;
   position: relative;
 }
-.item-text {
+.freeThing .item-text {
   position: absolute;
   top: 25%;
   left: 25%;
@@ -443,7 +499,7 @@ a:hover {
   font-weight: bold;
   text-align: center;
 }
-.item-text span {
+.freeThing .item-text span {
   display: block;
 }
 .freeThing__block-item::after{
@@ -476,3 +532,104 @@ a:hover {
 }
 /* Product Size 
 ------------------------------------------------------------*/
+
+/* ProductInfo */
+.productInfo { max-height: 150rem}
+.productInfo__container {
+  display: grid;
+  height: auto;
+  grid-template-columns: minmax(min-content,16rem) minmax(min-content,82rem);
+  max-width: 98rem;
+  height: 63rem;
+  margin: 5rem auto 0;
+  
+}
+.productInfo__item {
+  border: 1px outset var(--colorGray);
+  display: flex;
+  align-items: center;
+  padding: 0 4rem 0 3.5rem;
+}
+.productInfo__title { 
+  justify-content: center;
+  background-color: var(--colorPinkBg);
+}
+.productInfo__title span { 
+  max-width: 10rem; 
+  text-align: center
+}
+.productInfo__item:last-child {
+  display: grid;
+  grid-template-columns: repeat(4,25%);
+  padding: 3.5rem;
+}
+.item-style {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin: 0 .5rem;
+  border-radius: 50%;
+  background-color: black;
+}
+.productInfo__item:last-child .item {
+  display: flex;
+  align-items: center;
+}
+.productInfo__item:last-child .item-style {
+  width: 25px;
+  height: 25px;
+  background-color: var(--colorPinkBg);
+  position: relative;
+  margin-right: 1rem;
+}
+.productInfo__item:last-child .item-style::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotate(125deg);
+  height: .5rem;
+  width: 1.5rem;
+  border-right: 5px solid white;
+  border-top: 5px solid white;
+  z-index: 2;
+}
+/* ProductInfo
+----------------------------------------------------------- */
+
+/* Button scroll to top */
+#pageTopBtn {
+  position: fixed;
+  z-index: 99;
+  bottom: 2%;
+  right: 1%;
+  background-image: url('../../img/pageTop_icon.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 7rem;
+  width: 7rem;
+  display: none;
+}
+#pageTopBtn:hover { opacity: .7; }
+/* Button scroll to top 
+----------------------------------------------------------- */
+
+/* Block Fiexd */
+#blockFixed {
+  position: fixed;
+  z-index: 99;
+  top: 30%;
+  right: 0%;
+  background-image: url('../../img/blockFixed_pic.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  height: 20rem;
+  width: 7rem;
+  opacity: .7;
+}
+#blockFixed:hover {opacity: 1;}
+/* Block Fiexd 
+------------------------------------------------------------ */
+

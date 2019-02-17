@@ -73,6 +73,9 @@
     <!-- contents-->
     <main>
       <div class="contents">
+        <!-- Block Fixed -->
+        <a href="#" id="blockFixed"></a>
+        <!-- Block Fixed -->
         <!--Introduct-->
         <div class="introduct">
           <div class="introduct__frist box">
@@ -199,29 +202,22 @@
           <div class="box product__block">
             <div class="product__img">
               <div class="product__img-slide">
-                <div class="slideCurrent" data-index="1">
-                  <img src="./img/product_pic.jpg" alt="product_pic">
-                </div>
-                <div class="slideCureent" data-index="2">
-                  <img src="./img/product_thumb02.jpg" alt="product_thumb02">
-                </div>
-                <div class="slideCureent" data-index="3">
-                  <img src="./img/product_thumb03.jpg" alt="product_thumb03">
-                </div>
-                <div class="slideCureent" data-index="4">
-                  <img src="./img/product_thumb04.jpg" alt="product_thumb04">
-                </div>
+                <img class="slideCurrent" src="./img/product_pic.jpg" alt="product_pic">
+                <img class="slideCurrent" src="./img/product_thumb02.jpg" alt="product_thumb02">
+                <img class="slideCurrent" src="./img/product_thumb03.jpg" alt="product_thumb03">
+                <img class="slideCurrent" src="./img/product_thumb04.jpg" alt="product_thumb04">
                 <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">
+                <a class="controlSlide prev" data-plus="-1">
                   <i class="fa fa-angle-left"></i>
                 </a>
-                <a class="next" onclick="plusSlides(1)">
+                <a class="controlSlide next" data-plus="1">
                   <i class="fa fa-angle-right"></i>
                 </a>
               </div>
               <ul class="product__img-list">
-                <li class="img-item acitve">
-                  <img class="slideItem" data-id="1" src="./img/product_thumb01.jpg" alt="product_thumb01">
+                <li class="img-item">
+                  <img class="slideItem slideItemDefau" data-id="1" src="./img/product_thumb01.jpg"
+                    alt="product_thumb01">
                 </li>
                 <li class="img-item">
                   <img class="slideItem" data-id="2" src="./img/product_thumb02.jpg" alt="product_thumb03">
@@ -341,36 +337,29 @@
         <!-- Product Size -->
 
         <!-- Product Info-->
-          
+
         <!-- Product -->
         <div class="product">
-          <img class="box__title" src="./img/info_title.jpg" alt="info_title">
+          <img class="box__title" src="./img/product_title.jpg" alt="product_title">
           <div class="box product__block">
             <div class="product__img">
               <div class="product__img-slide">
-                <div class="slideCurrent" data-index="1">
-                  <img src="./img/product_pic.jpg" alt="product_pic">
-                </div>
-                <div class="slideCureent" data-index="2">
-                  <img src="./img/product_thumb02.jpg" alt="product_thumb02">
-                </div>
-                <div class="slideCureent" data-index="3">
-                  <img src="./img/product_thumb03.jpg" alt="product_thumb03">
-                </div>
-                <div class="slideCureent" data-index="4">
-                  <img src="./img/product_thumb04.jpg" alt="product_thumb04">
-                </div>
+                <img class="mySlide" src="./img/product_pic.jpg" alt="product_pic">
+                <img class="mySlide" src="./img/product_thumb02.jpg" alt="product_thumb02">
+                <img class="mySlide" src="./img/product_thumb03.jpg" alt="product_thumb03">
+                <img class="mySlide" src="./img/product_thumb04.jpg" alt="product_thumb04">
                 <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">
+                <a class="controlSlide prev" data-plus="-1">
                   <i class="fa fa-angle-left"></i>
                 </a>
-                <a class="next" onclick="plusSlides(1)">
+                <a class="controlSlide next" data-plus="1">
                   <i class="fa fa-angle-right"></i>
                 </a>
               </div>
               <ul class="product__img-list">
-                <li class="img-item acitve">
-                  <img class="slideItem" data-id="1" src="./img/product_thumb01.jpg" alt="product_thumb01">
+                <li class="img-item">
+                  <img class="slideItem slideItemDefau" data-id="1" src="./img/product_thumb01.jpg"
+                    alt="product_thumb01">
                 </li>
                 <li class="img-item">
                   <img class="slideItem" data-id="2" src="./img/product_thumb02.jpg" alt="product_thumb03">
@@ -413,18 +402,169 @@
         </div>
         <!-- Product -->
 
-
+        <div class="productiInfo box">
+          <div class="productInfo__container">
+            <div class="productInfo__item productInfo__title">
+              <span>全成分</span>
+            </div>
+            <div class="productInfo__item">
+              <span>水、グリセリン、BG、ステアリン酸グリセリン(SE)、ヒマワリ種子油、キャンデリラワックス、ベへニルアルコール、ミリスチルアルコール、水添パーム油、パルミチン酸セチル、ジグリセリン、トコフェロール、フェノキシエタノール</span>
+            </div>
+            <div class="productInfo__item productInfo__title">
+              <span>使用方法</span>
+            </div>
+            <div class="productInfo__item">
+              <span>適量を取り、髪全体になじませてください。</span>
+            </div>
+            <div class="productInfo__item productInfo__title">
+              <span>注意事項</span>
+            </div>
+            <div class="productInfo__item">
+              <ul class="item-list">
+                <li class="item">
+                  <span class="item-style"></span>
+                  お肌に異常が生じていないかよく注意して使用してください。お肌に合わないとき、即ち次のような場合には
+                  使用を中止してください。そのまま使用を続けますと、症状を悪化させる恐れがありますので皮膚科専門医等に
+                  ご相談されることをおすすめします。
+                </li>
+                <li class="item">
+                  &lt;1&gt; 使用中、赤み、はれ、かゆみ。刺激、色抜け（白斑等）、黒ずみ等の異常があらわれた場合。
+                </li>
+                <li class="item">
+                  &lt;2&gt;使用したお肌に、直接日光があたって&lt;1&gt;のような異常があらわれた場合。
+                </li>
+                <li class="item">
+                  <span class="item-style"></span>
+                  傷やはれもの、湿疹等、異常のある部位には使用しないでください。
+                </li>
+                <li class="item">
+                  <span class="item-style"></span>
+                  直接日光のあたる場所、極端に高温または低温の場所を避け、乳幼児の手の届かない場所に保管してください。
+                </li>
+              </ul>
+            </div>
+            <div class="productInfo__item productInfo__title">
+              <span>処方についてのお知らせ</span>
+            </div>
+            <div class="productInfo__item">
+              <ul class="item-list">
+                <li class="item">
+                  <span class="item-style"></span>
+                  天然成分を配合しているため、製品の色や香りが変わることがありますが、品質に問題はございません。
+                </li>
+                <li class="item">
+                  <span class="item-style"></span>
+                  まれに色調等に多少の変化がみられることがありますが、品質的には問題ありません。
+                </li>
+              </ul>
+            </div>
+            <div class="productInfo__item productInfo__title">
+              フリー項目
+            </div>
+            <div class="productInfo__item">
+              <div class="item">
+                <span class="item-style"></span>
+                <span>パラベン</span>
+              </div>
+              <div class="item">
+                <span class="item-style"></span>
+                <span>合成香料</span>
+              </div>
+              <div class="item">
+                <span class="item-style"></span>
+                <span>旧指定成分</span>
+              </div>
+              <div class="item">
+                <span class="item-style"></span>
+                <span>アルコール</span>
+              </div>
+              <div class="item">
+                <span class="item-style"></span>
+                <span>合成着色料</span>
+              </div>
+              <div class="item">
+                <span class="item-style"></span>
+                <span>鉱物油(ミネラルオイル)</span>
+              </div>
+              <div class="item">
+                <span class="item-style"></span>
+                <span>合成ポリマー</span>
+              </div>
+              <div class="item">
+                <span class="item-style"></span>
+                <span>紫外線吸収剤</span>
+              </div>
+              <div class="item">
+                <span class="item-style"></span>
+                <span>シリコン</span>
+              </div>
+              <div class="item">
+                <span class="item-style"></span>
+                <span>オイル</span>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- Product Info-->
 
+        <!-- Button scroll to top -->
+        <a href="#" id="pageTopBtn"></a>
+        <!-- Button scroll to top -->
+
+        
       </div>
     </main>
     <!-- /contents-->
     <!-- footer -->
-    <!-- <footer>
-  <div id="footer">
-    Footer
-  </div>
-  </footer> -->
+    <footer>
+      <div id="footer">
+        <div class="footer__box box">
+          <div class="footer__block">
+            <img src="./img/header_logo.png" alt="logo__Footer">
+          </div>
+          <div class="footer__block">
+            <ul class="footer__block-list">
+              <li class="item">
+                <a href="#" class="item-link"><i class="fa fa-angle-right"></i>アイテム一覧</a>
+              </li>
+              <li class="item">
+                <a href="#" class="item-link"><i class="fa fa-angle-right"></i>Q&amp;A</a>
+              </li>
+              <li class="item">
+                <a href="#" class="item-link"><i class="fa fa-angle-right"></i>ご注文の流れ</a>
+              </li>
+              <li class="item">
+                <a href="#" class="item-link"><i class="fa fa-angle-right"></i>お問い合わせ</a>
+              </li>
+            </ul>
+            <ul class="footer__block-list">
+              <li class="item">
+                <a href="#" class="item-link"><i class="fa fa-angle-right"></i>お支払い方法について</a>
+              </li>
+              <li class="item">
+                <a href="#" class="item-link"><i class="fa fa-angle-right"></i>配送方法・送料について</a>
+              </li>
+              <li class="item">
+                <a href="#" class="item-link"><i class="fa fa-angle-right"></i>プライバシーポリシー</a>
+              </li>
+              <li class="item">
+                <a href="#" class="item-link"><i class="fa fa-angle-right"></i>特定商取引法に基づく表記</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__block">
+            <a href="#" class="footer-btn align_c">
+              <i class="fa fa-shopping-cart"></i>
+              カートを見る
+            </a>
+            <a href="#" class="footer-btn align_c">
+              <i class="fa fa-user"></i>
+              マイアカウント
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- /footer -->
   </div>
   <!-- /wrapper -->

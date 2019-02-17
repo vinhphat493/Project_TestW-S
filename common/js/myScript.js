@@ -7,32 +7,48 @@
 $(document).ready(function () {
     //Product slide show
     var index = 1;
-    $(".slideCureent").hide();
-
+    var productSlide = $(".slideCurrent");
+    var productInfoSlide = $(".mySlide");
+    $(".slideItemDefau").addClass("acitveProduct");
     $(".slideItem").on('click', function () {
-        let slideId = $(this).attr("data-id");
+        $(".slideItem").removeClass("acitveProduct");
+        var slideId = $(this).attr("data-id");
+        $(this).toggleClass("acitveProduct");
         index = slideId;
+        slidesShow(index, productSlide);
+        slidesShow(index, productInfoSlide);
+    });
+
+    $(".controlSlide").on('click', function () {
+        var indexPlus = parseInt($(this).attr("data-plus"));
+        index += indexPlus;
+        slidesShow(index, productSlide);
+        slidesShow(index, productInfoSlide);
     })
 
-    let array = $(".slideCureent");
-    for (let i = 0; i<array.length ; i++){
-        console.log(array[i].attr("data-index"));
+    function slidesShow(n, slidesBox) {
+        var i;
+        var x = slidesBox;
+        if (n > x.length) { index = 1 };
+        if (n < 1) { index = x.length - 1 };
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[index - 1].style.display = "block";
     }
 
-
-    // function showSlides(n) {
-    //     console.log(n);
-    //     let slides = (".slideCurrent");
-    //     if (n > slides.length) { slideIndex = 1 }
-    //     if (n < 1) { slideIndex = slides.length }
-    //     for (let i = 0; i < slides.length; i++) {
-    //         slides[i].hide(); 
-    //     }
-    //     for (let i = 0; i < dots.length; i++) {
-    //         dots[i].className = dots[i].className.replace(" active", "");
-    //     }
-    //     slides[slideIndex - 1].style.display = "block";
-    //     dots[slideIndex - 1].className += " active";
-    // }
-    // showSlides(1);
+    //Event Button scroll to top
+    //Check to see if the window is top if not then display button pageTop
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('#pageTopBtn').fadeIn();
+        } else {
+            $('#pageTopBtn').fadeOut();
+        }
+    });
+    //Click button PageTop event to scroll to top
+    $('#pageTopBtn').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
 });
