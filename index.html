@@ -27,45 +27,84 @@
     <!-- header -->
     <header>
       <div id="header">
-        <!--User login-->
-        <div class="header__top">
-          <ul class="header__top-list fr">
-            <li class="list__item">
-              <a class="list__item-link" href="#">
-                <i class="fa fa-user"></i>
-                マイアカウント
-              </a>
-            </li>
-            <li class="list__item">
-              <a class="list__item-link" href="#">
-                <i class="fa fa-shopping-cart"></i> カート
-              </a>
-              <span class="item-amount align_c">0</span>
-            </li>
-          </ul>
-          <div class="clearfix"></div>
+        <!-- Header For Pc -->
+        <div class="pc">
+          <!--User login-->
+          <div class="header__top">
+            <ul class="header__top-list fr">
+              <li class="list__item">
+                <a class="list__item-link" href="#">
+                  <i class="fa fa-user"></i>
+                  マイアカウント
+                </a>
+              </li>
+              <li class="list__item">
+                <a class="list__item-link" href="#">
+                  <i class="fa fa-shopping-cart"></i> カート
+                </a>
+                <span class="item-amount align_c">0</span>
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <!--User login-->
+
+          <!--Logo Image-->
+          <img class="header__imgLogo" src="./img/header_logo.png" alt="header_logo">
+          <!--Logo Image-->
+
+          <!--Navigation PC-->
+          <nav class="header__nav align_c">
+            <ul id="navi">
+              <li class="navi__item"><a class="navi__link" href="#">home</a></li>
+              <li class="navi__item"><a class="navi__link" href="#">アイテム一覧</a></li>
+              <li class="navi__item"><a class="navi__link" href="#">Q＆A</a></li>
+              <li class="navi__item"><a class="navi__link" href="#">ご注文の流れ</a></li>
+              <li class="navi__item"><a class="navi__link" href="#">お問い合わせ</a></li>
+            </ul>
+          </nav>
+          <!--Navigation PC-->
         </div>
-        <!--User login-->
+        <!-- Header For Pc -->
 
-        <!--Logo Image-->
-        <img class="header__imgLogo" src="./img/header_logo.png" alt="header_logo">
-        <!--Logo Image-->
-
-        <!--Navigation PC-->
-        <nav class="header__nav align_c">
-          <ul id="navi">
-            <li class="navi__item"><a class="navi__link" href="#">home</a></li>
-            <li class="navi__item"><a class="navi__link" href="#">アイテム一覧</a></li>
-            <li class="navi__item"><a class="navi__link" href="#">Q＆A</a></li>
-            <li class="navi__item"><a class="navi__link" href="#">ご注文の流れ</a></li>
-            <li class="navi__item"><a class="navi__link" href="#">お問い合わせ</a></li>
-          </ul>
-        </nav>
-        <!--Navigation PC-->
+        <!-- *********************** -->
+        <!-- Header For Sp -->
+        <div class="sp">
+          <nav class="header__nav">
+            <a href="#" class="header__logo">
+              <img src="./img/headerSP_logo.png" alt="header__imgLogo" />
+            </a>
+            <ul id="navi">
+              <li class="navi__item">
+                <a href="#" class="navi__link"><i class="fa fa-user"></i></a>
+              </li>
+              <li class="navi__item">
+                <a href="#" class="navi__link"><i class="fa fa-shopping-cart"></i></a>
+              </li>
+              <li class="navi__item">
+                <label for="collapse" class="btn__collapse align_c">
+                  <div class="open">
+                    <i class="fa fa-bars"></i>
+                    <p class="text">MENU</p>
+                  </div>
+                  <div class="close">
+                    <i class="fa fa-times"></i>
+                    <p>CLOSE</p>
+                  </div>
+                </label>
+                <input type="checkbox" id="collapse" style="display:none" class="inp__collapse" />
+                <div class="navi__bg"></div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- Header For Sp -->
+        <!-- *********************** -->
 
         <!-- Carousel -->
         <div class="header__carousel">
-          <img src="img/carousel_banner.png" alt="carousel_banner">
+          <img class="pc" src="img/carousel_banner.png" alt="carousel_banner">
+          <img class="sp" src="img/carousel_sp_banner.jpg" alt="carousel_banner">
         </div>
         <!-- Carousel -->
       </div>
@@ -78,15 +117,15 @@
         <!--Introduct-->
         <div class="introduct">
           <div class="introduct__frist introduct__box">
-            <div class="box__title">
+            <img class="box_sp_title sp" src="./img/introduct_title01.png" alt="introduct_title01">
+            <div class="box__title pc">
               <img src="./img/introduct_title01.png" alt="introduct_title01">
             </div>
             <div class="box__item">
               <div class="item align_r">
                 <img src="./img/introduct_pic01.png" alt="introduct_pic01">
               </div>
-              <div class="item">
-                <!-- <img src="./img/introduct_pic02.png" alt=""> -->
+              <div class="item pc">
                 <div class="item-content align_l">
                   <p class="item-text ">
                     <span>赤ちゃんの寝ぐせ、スタイリング剤で直したいけれど、</span>
@@ -106,11 +145,30 @@
                   </p>
                 </div>
               </div>
+              <div class="item sp">
+                <img src="./img/introduct_sp_pic02.jpg" alt="introduct_sp_pic02">
+                <p class="item-text ">
+                  赤ちゃんの寝ぐせ、スタイリング剤で直
+                  したいけれど、肌が荒れたらどうしよう…
+                  そもそも赤ちゃん用のスタイリング剤を
+                  見かけない…そんな日常のちょっとしたお悩みをThankyouMAMAが10個の
+                  フリーで実現しました。
+
+                  <br />
+                  <br />
+                  <span>安心安全にわが子をおめかし。</span>
+                  <br />
+                  <span>すべては頑張るママのため。</span>
+                </p>
+              </div>
             </div>
           </div>
           <div class="introduct__second introduct__box">
-            <div class="box__title">
-              <img src="./img/introduct_title02.png" alt="introduct_title02">
+            <div class="box_sp_title sp">
+              <img src="./img/introduct_sp_title02.png" alt="intoduct_sp_title02">
+            </div>
+            <div class="box__title pc">
+              <img src="./img/introduct_title02.png" alt="intoduct_title02">
             </div>
             <div class="box__item">
               <div class="item">
@@ -137,25 +195,48 @@
             </div>
           </div>
           <div class="introduct__third introduct__box">
-            <img class="box__title" src="./img/introduct_title03.png" alt="introduct_title03">
-            <div class="box__item">
-              <div class="item">
-                <img class="overImg" src="./img/introduct_catch01.png" alt="introduct_catch01">
-                <img class="item-img" src="./img/introduct_pic061.png" alt="introduct_pic06">
+            <img class="box__title box_sp_title" src="./img/introduct_title03.png" alt="introduct_title03">
+            <div class="pc">
+              <div class="box__item">
+                <div class="item">
+                  <img class="overImg" src="./img/introduct_catch01.png" alt="introduct_catch01">
+                  <img class="item-img" src="./img/introduct_pic06.png" alt="introduct_pic06">
+                </div>
+                <div class="item">
+                  <img class="overImg" src="./img/introduct_catch02.png" alt="introduct_catch02">
+                  <img class="item-img" src="./img/introduct_pic07.png" alt="introduct_pic07">
+                </div>
               </div>
-              <div class="item">
-                <img class="overImg" src="./img/introduct_catch02.png" alt="introduct_catch02">
-                <img class="item-img" src="./img/introduct_pic071.png" alt="introduct_pic07">
+              <div class="box__item">
+                <div class="item">
+                  <img class="overImg" src="./img/introduct_catch03.png" alt="introduct_catch01">
+                  <img class="item-img" src="./img/introduct_pic08.png" alt="introduct_pic06">
+                </div>
+                <div class="item">
+                  <img class="overImg" src="./img/introduct_catch04.png" alt="introduct_catch02">
+                  <img class="item-img" src="./img/introduct_pic09.png" alt="introduct_pic07">
+                </div>
               </div>
             </div>
-            <div class="box__item">
-              <div class="item">
-                <img class="overImg" src="./img/introduct_catch03.png" alt="introduct_catch01">
-                <img class="item-img" src="./img/introduct_pic081.png" alt="introduct_pic06">
+            <div class="sp">
+              <div class="box__item">
+                <div class="item">
+                  <img class="overImg" src="./img/introduct_sp_catch01.png" alt="introduct_catch01">
+                  <img class="item-img" src="./img/introduct_sp_pic06.png" alt="introduct_sp_pic06">
+                </div>
+                <div class="item">
+                  <img class="overImg" src="./img/introduct_sp_catch02.png" alt="introduct_catch02">
+                  <img class="item-img" src="./img/introduct_sp_pic07.png" alt="introduct_sp_pic07">
+                </div>
               </div>
-              <div class="item">
-                <img class="overImg" src="./img/introduct_catch04.png" alt="introduct_catch02">
-                <img class="item-img" src="./img/introduct_pic091.png" alt="introduct_pic07">
+              <div class="box__item">
+                <div class="item">
+                  <img class="item-img" src="./img/introduct_sp_pic08.png" alt="introduct_sp_pic06">
+                </div>
+                <div class="item">
+                  <img class="overImg" src="./img/introduct_sp_catch04.png" alt="introduct_catch02">
+                  <img class="item-img" src="./img/introduct_sp_pic09.png" alt="introduct_sp_pic07">
+                </div>
               </div>
             </div>
           </div>
@@ -164,14 +245,15 @@
 
         <!--Comment Box-->
         <div class="comment">
-          <img class="box__title" src="./img/comment_title.png" alt="comment_title">
+          <img class="box__title box_sp_title" src="./img/comment_title.png" alt="comment_title">
           <div class="comment__block">
             <div class="comment__block-img">
               <img src="./img/comment_icon01.png" alt="comment_icon01">
               <p>1歳児 母</pc>
             </div>
             <div class="comment__block-text">
-              <img src="./img/comment_bg01.png" alt="comment_bg01">
+              <img class="pc" src="./img/comment_bg01.png" alt="comment_bg01">
+              <img class="sp" src="./img/comment_sp_bg01.png" alt="comment_bg01">
               <span>サラサラとした肌触りでとても良いです！ブラシでとってふわっとのせるとほどよくスタイルが決まり
                 ナチュラルで使用しやすいです。ほんのり甘い香りがするのも良いポイントだと思います。</span>
             </div>
@@ -182,7 +264,8 @@
               <p>3歳児 母</p>
             </div>
             <div class="comment__block-text">
-              <img src="./img/comment_bg02.png" alt="comment_bg02">
+              <img class="pc" src="./img/comment_bg02.png" alt="comment_bg02">
+              <img class="sp" src="./img/comment_sp_bg02.png" alt="comment_bg02">
               <span>サラサラとした肌触りでとても良いです！ブラシでとってふわっとのせるとほどよくスタイルが決まり
                 ナチュラルで使用しやすいです。ほんのり甘い香りがするのも良いポイントだと思います。</span>
             </div>
@@ -193,7 +276,8 @@
               <p>2歳児 母</p>
             </div>
             <div class="comment__block-text">
-              <img src="./img/comment_bg01.png" alt="comment_bg01">
+              <img class="pc" src="./img/comment_bg01.png" alt="comment_bg01">
+              <img class="sp" src="./img/comment_sp_bg01.png" alt="comment_bg01">
               <span>サラサラとした肌触りでとても良いです！ブラシでとってふわっとのせるとほどよくスタイルが決まり
                 ナチュラルで使用しやすいです。ほんのり甘い香りがするのも良いポイントだと思います。</span>
             </div>
@@ -203,7 +287,7 @@
 
         <!-- Product -->
         <div class="product">
-          <img class="box__title" src="./img/product_title.jpg" alt="product_title">
+          <img class="box_sp_title box__title" src="./img/product_title.jpg" alt="product_title">
           <div class="product__block">
             <div class="product__img">
               <div class="product__img-slide">
@@ -266,62 +350,130 @@
 
         <!-- 10 Free Thing -->
         <div class="freeThing">
-          <div class="box__title align_c">
+          <div class="box_sp_title align_c box__title">
             <img src="./img/freething_title.png" alt="freething_title">
             <div class="title-caption">
-              <p>デリケートな赤ちゃんの為に本当に安心安全を目指した時、フリー項目は一つでも多い方が良い！</p>
-              <p>そんな当たり前の発想から他の商品には無い10の項目フリーを実現したそんな商品を開発を目指しました。</p>
+              <p class="pc">デリケートな赤ちゃんの為に本当に安心安全を目指した時、フリー項目は一つでも多い方が良い！</p>
+              <p class="pc">そんな当たり前の発想から他の商品には無い10の項目フリーを実現したそんな商品を開発を目指しました。</p>
+              <p class="sp">デリケートな赤ちゃんの為に
+                <br>
+                本当に安心安全を目指した時、
+                <br>
+                フリー項目は一つでも多い方が良い！
+                <br>
+                そんな当たり前の発想から他の商品には無い
+                <br>
+                10の項目フリーを実現した
+                <br>
+                そんな商品を開発を目指しました。</p>
             </div>
           </div>
           <div class="freeThing__container">
-            <ul class="freeThing__block">
-              <li class="freeThing__block-item">
-                <p class="item-text text-after">合成香料</p>
-              </li>
-              <li class="freeThing__block-item">
-                <p class="item-text text-after">合成着色料</p>
-              </li>
-              <li class="freeThing__block-item">
-                <p class="item-text text-after">エタノール</p>
-              </li>
-              <li class="freeThing__block-item">
-                <p class="item-text text-after">パラベン</p>
-              </li>
-            </ul>
-            <ul class="freeThing__block">
-              <li class="freeThing__block-item">
-                <p class="item-text text-after">鉱物油</p>
-              </li>
-              <li class="freeThing__block-item">
-                <p class="item-text text-after">シリコン</p>
-              </li>
-              <li class="freeThing__block-item">
-                <p class="item-text">
-                  <span>合成界面</span>
-                  <span class="text-after">活性剤</span>
-                </p>
-              </li>
-              <li class="freeThing__block-item">
-                <p class="item-text">
-                  <span>動物性</span>
-                  <span class="text-after">由来原料</span>
-                </p>
-              </li>
-            </ul>
-            <ul class="freeThing__block">
-              <li class="freeThing__block-item">
-                <p class="item-text">
-                  <span>旧表示</span>
-                  <span class="text-after">指定成分</span>
-                </p>
-              </li>
-              <li class="freeThing__block-item">
-                <p class="item-text">
-                  <span>紫外線</span>
-                  <span class="text-after">吸収剤</span>
-                </p>
-              </li>
-            </ul>
+            <div class="sp">
+              <ul class="freeThing__block">
+                <li class="freeThing__block-item">
+                  <p class="item-text text-after">合成香料</p>
+                </li>
+                <li class="freeThing__block-item">
+                  <p class="item-text text-after">合成着色料</p>
+                </li>
+              </ul>
+              <ul class="freeThing__block">
+                <li class="freeThing__block-item">
+                  <p class="item-text text-after">エタノール</p>
+                </li>
+                <li class="freeThing__block-item">
+                  <p class="item-text text-after">パラベン</p>
+                </li>
+              </ul>
+              <ul class="freeThing__block">
+                <li class="freeThing__block-item">
+                  <p class="item-text text-after">鉱物油</p>
+                </li>
+                <li class="freeThing__block-item">
+                  <p class="item-text text-after">シリコン</p>
+                </li>
+              </ul>
+              <ul class="freeThing__block">
+                <li class="freeThing__block-item">
+                  <p class="item-text">
+                    <span>合成界面</span>
+                    <span class="text-after">活性剤</span>
+                  </p>
+                </li>
+                <li class="freeThing__block-item">
+                  <p class="item-text">
+                    <span>動物性</span>
+                    <span class="text-after">由来原料</span>
+                  </p>
+                </li>
+              </ul>
+              <ul class="freeThing__block">
+                <li class="freeThing__block-item">
+                  <p class="item-text">
+                    <span>旧表示</span>
+                    <span class="text-after">指定成分</span>
+                  </p>
+                </li>
+                <li class="freeThing__block-item">
+                  <p class="item-text">
+                    <span>紫外線</span>
+                    <span class="text-after">吸収剤</span>
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="pc">
+              <ul class="freeThing__block">
+                <li class="freeThing__block-item">
+                  <p class="item-text text-after">合成香料</p>
+                </li>
+                <li class="freeThing__block-item">
+                  <p class="item-text text-after">合成着色料</p>
+                </li>
+                <li class="freeThing__block-item">
+                  <p class="item-text text-after">エタノール</p>
+                </li>
+                <li class="freeThing__block-item">
+                  <p class="item-text text-after">パラベン</p>
+                </li>
+              </ul>
+              <ul class="freeThing__block">
+                <li class="freeThing__block-item">
+                  <p class="item-text text-after">鉱物油</p>
+                </li>
+                <li class="freeThing__block-item">
+                  <p class="item-text text-after">シリコン</p>
+                </li>
+                <li class="freeThing__block-item">
+                  <p class="item-text">
+                    <span>合成界面</span>
+                    <span class="text-after">活性剤</span>
+                  </p>
+                </li>
+                <li class="freeThing__block-item">
+                  <p class="item-text">
+                    <span>動物性</span>
+                    <span class="text-after">由来原料</span>
+                  </p>
+                </li>
+              </ul>
+
+              <ul class="freeThing__block">
+                <li class="freeThing__block-item">
+                  <p class="item-text">
+                    <span>旧表示</span>
+                    <span class="text-after">指定成分</span>
+                  </p>
+                </li>
+                <li class="freeThing__block-item">
+                  <p class="item-text">
+                    <span>紫外線</span>
+                    <span class="text-after">吸収剤</span>
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <!-- 10 Free Thing -->
@@ -341,13 +493,10 @@
         <!-- Product Size -->
 
         <!-- Product Info-->
-
-
-
         <div class="productInfo">
           <!-- Product -->
           <div class="product">
-            <img class="box__title" src="./img/info_title.jpg" alt="info_title">
+            <img class="box__title box_sp_title" src="./img/info_title.jpg" alt="info_title">
             <div class="product__block">
               <div class="product__img">
                 <div class="product__img-slide">
@@ -407,8 +556,7 @@
             </div>
           </div>
           <!-- Product -->
-
-          <div class="productInfo__container">
+          <div class="productInfo__container pc">
             <div class="productInfo__item productInfo__title">
               <span>全成分</span>
             </div>
@@ -509,7 +657,137 @@
               </div>
             </div>
           </div>
+          <div class="productInfo__container sp">
+            <div class="productInfo__block">
+              <div class="block-title">
+                <p class="text-title">全成分</p>
+                <span class="icon"><i class="fa fa-plus"></i></span>
+              </div>
+              <div class="block-body">
+                <p class="content">
+                  水、グリセリン、BG、ステアリン酸グリセリン(SE)、ヒマワリ種子油、キャンデリラワックス、ベへニルアルコール、ミリスチルアルコール、水添パーム油、パルミチン酸セチル、ジグリセリン、トコフェロール、フェノキシエタノール
+                </p>
+              </div>
+            </div>
+            <div class="productInfo__block">
+              <div class="block-title">
+                <p class="text-title">使用方法</p>
+                <span class="icon"><i class="fa fa-plus"></i></span>
+              </div>
+              <div class="block-body">
+                <p class="content">
+                  適量を取り、髪全体になじませてください。
+                </p>
+              </div>
+            </div>
+            <div class="productInfo__block">
+              <div class="block-title">
+                <p class="text-title">注意事項</p>
+                <span class="icon"><i class="fa fa-plus"></i></span>
+              </div>
+              <div class="block-body">
+                <ul class="content-list">
+                  <li class="content-item">
+                    <span class="content-style"></span>
+                    お肌に異常が生じていないかよく注意して使用してください。お肌に合わないとき、即ち次のような場合には
+                  </li>
+                  <li class="content-item">
+                    使用を中止してください。そのまま使用を続けますと、症状を悪化させる恐れがありますので皮膚科専門医等に
+                  </li>
+                  <li class="content-item">
+                    ご相談されることをおすすめします。
+                  </li>
+                  <li class="content-item">
+                    &lt;1&gt; 使用中、赤み、はれ、かゆみ。刺激、色抜け（白斑等）、黒ずみ等の異常があらわれた場合。
+                  </li>
+                  <li class="content-item">
+                    &lt;2&gt; 使用したお肌に、直接日光があたって &lt;1&gt; のような異常があらわれた場合。
+                  </li>
+                  <li class="content-item">
+                    <span class="content-style"></span>
+                    傷やはれもの、湿疹等、異常のある部位には使用しないでください。
+                  </li>
+                  <li class="content-item">
+                    <span class="content-style"></span>
+                    直接日光のあたる場所、極端に高温または低温の場所を避け、乳幼児の手の届かない場所に保管してください。
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="productInfo__block">
+              <div class="block-title">
+                <p class="text-title">処方についてのお知らせ</p>
+                <span class="icon"><i class="fa fa-plus"></i></span>
+              </div>
+              <div class="block-body">
+                <ul class="content-list">
+                  <li class="content-item">
+                    <span class="content-style"></span>
+                    天然成分を配合しているため、製品の色や香りが変わることがありますが、品質に問題はございません。
+                  </li>
+                  <li class="content-item">
+                    <span class="content-style"></span>
+                    まれに色調等に多少の変化がみられることがありますが、品質的には問題ありません。
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="productInfo__block">
+              <div class="block-title">
+                <p class="text-title">フリー項目</p>
+                <span class="icon"><i class="fa fa-plus"></i></span>
+              </div>
+              <div class="block-body">
+                <ul class="content-list">
+                  <li class="content-item">
+                    <span class="content-style"></span>
+                    パラベン
+                  </li>
+                  <li class="content-item">
+                    <span class="content-style"></span>
+                    合成着色料
+                  </li>
+                  <li class="content-item">
+                    <span class="content-style"></span>
+                    シリコン
+                  </li>
+                  <li class="content-item">
+                    <span class="content-style"></span>
+                    旧指定成分
+                  </li>
+                  <li class="content-item">
+                    <span class="content-style"></span>
+                    合成ポリマー
+                  </li>
+                </ul>
+                <ul class="content-list">
+                  <li class="content-item">
+                    <span class="content-style"></span>
+                    合成香料
+                  </li>
+                  <li class="content-item">
+                    <span class="content-style"></span>
+                    鉱物油(ミネラルオイル)
+                  </li>
+                  <li class="content-item">
+                    <span class="content-style"></span>
+                    オイル
+                  </li>
+                  <li class="content-item">
+                    <span class="content-style"></span>
+                    アルコール
+                  </li>
+                  <li class="content-item">
+                    <span class="content-style"></span>
+                    紫外線吸収剤
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
         </div>
+
         <!-- Product Info-->
 
         <!-- Button scroll to top -->
@@ -517,7 +795,8 @@
         <!-- Button scroll to top -->
 
         <!-- Block Fixed -->
-        <a href="#" id="blockFixed"></a>
+        <a href="#" class="blockFixed pc"></a>
+        <a href="#" class="blockFixed sp"></a>
         <!-- Block Fixed -->
       </div>
     </main>
@@ -562,11 +841,11 @@
           <div class="footer__block">
             <a href="#" class="footer-btn align_c">
               <i class="fa fa-shopping-cart"></i>
-              カートを見る
+              <span>カートを見る</span>
             </a>
             <a href="#" class="footer-btn align_c">
               <i class="fa fa-user"></i>
-              マイアカウント
+              <span>マイアカウント</span>
             </a>
           </div>
         </div>

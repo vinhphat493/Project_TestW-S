@@ -51,4 +51,11 @@ $(document).ready(function () {
         $('html, body').animate({ scrollTop: 0 }, "slow");
         return false;
     });
+
+    // Event Show the button close when user click the subNav for Layout SP
+    $(".btn__collapse").on('click',function(){
+        $(".close").toggle();
+        $(".open").toggle();
+    })  
+    
 });
