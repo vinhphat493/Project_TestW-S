@@ -81,11 +81,11 @@ a:hover { opacity: .7;}
 .navi__bg {
   opacity: 0;
   background-image: url("../../img/snavi.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
-  width: 75rem;
-  height: 115rem;
+  background-position: top center;
+  min-width: 140rem;
+  height: 180rem;
   position: absolute;
   right: 0;
   top: 100%;
@@ -621,7 +621,7 @@ a:hover { opacity: .7;}
   text-align: center;
   display: flex;
   height: 10rem;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 .block-title .text-title {
@@ -634,7 +634,8 @@ a:hover { opacity: .7;}
   background-color: #dbc3c0;
   font-size: 2.5rem;
   color: white;
-  padding: 2rem 
+  padding: 2rem ;
+  margin-left: 10rem
 }
 .productInfo__block .block-body {
   border: 1px outset var(--colorGray);
@@ -660,11 +661,9 @@ a:hover { opacity: .7;}
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 4rem;
 }
-.productInfo__container .productInfo__block:last-child .block-body .content-list:first-child { 
-  width: 40%;
-  margin-left: 2rem;
-}
+.productInfo__container .productInfo__block:last-child .block-body .content-list:first-child { width: 50%;}
 .productInfo__container .productInfo__block:last-child .block-body .content-list:last-child { width: 60%;}
 .productInfo__container .productInfo__block:last-child .block-body .content-style {
   background-color: var(--colorPinkBg);
