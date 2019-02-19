@@ -31,7 +31,10 @@ a:hover {
 
 /* wrapper 
 -------------------------------------------------------------*/
-#wrapper { max-width: 140rem; }
+#wrapper { 
+  min-width: 140rem; 
+  position : relative;
+}
 
 /* header 
 -------------------------------------------------------------*/
@@ -40,7 +43,12 @@ a:hover {
 /* User login */
 .header__top { padding: 2rem 2rem 0 2rem; }
 
-.header__top-list { display: flex; }
+.header__top-list { 
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+  margin: 0 auto
+}
 
 .list__item { 
   padding: 0 2.5rem;
@@ -630,17 +638,25 @@ a:hover {
 ----------------------------------------------------------- */
 
 /* Button scroll to top */
+.pageTop {
+  /* width: 100%; */
+  position: fixed;
+  z-index: 100;
+  height: 7rem;
+  padding-right: 1rem;
+  bottom: 0;
+}
 #pageTopBtn {
   position: fixed;
   z-index: 99;
-  bottom: 2%;
-  right: 1%;
   background-image: url('../../img/pageTop_icon.png');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: contain;
   height: 7rem;
   width: 7rem;
+  bottom: 2%;
+  right: 2%;
   display: none;
 }
 #pageTopBtn:hover { opacity: .7; }

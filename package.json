@@ -1,0 +1,25 @@
+{
+  "name": "html_temp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage" : "https://vinhphat493.github.io/viProject_TestW-S",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy" : "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinhphat493/Project_TestW-S.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinhphat493/Project_TestW-S/issues"
+  },
+  "homepage": "https://github.com/vinhphat493/Project_TestW-S#readme"
+}

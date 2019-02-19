@@ -21,8 +21,9 @@ a:hover { opacity: .7;}
 /* wrapper 
 -------------------------------------------------------------*/
 #wrapper { 
-  min-width: 75rem;
+  min-width: 140rem;
   border:unset!important;
+  position: relative;
 }
 
 /* header 
@@ -128,11 +129,12 @@ a:hover { opacity: .7;}
 .footer__block:nth-child(2) { 
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   padding : 0 1rem;
 }
-.footer__block-list { width: 40%; }
-.footer__block-list:nth-child(2) {width: 55%;}
+.footer__block-list { width: 30%; }
+.footer__block-list:nth-child(2) {width: 40%;}
 #footer .item { margin: 2.5rem 0;}
 #footer .item-link { 
   color: var(--colorBlack)!important; 
@@ -140,7 +142,7 @@ a:hover { opacity: .7;}
 }
 .footer__block:last-child .footer-btn{
   display: flex;
-  width: 100%;
+  width: 80%;
   margin: 1rem auto;
   background-color: black;
   border: unset;
@@ -194,7 +196,11 @@ a:hover { opacity: .7;}
   margin: 2.5rem auto;
   height: auto;
   position: relative;
-
+}
+.introduct__frist .item:nth-child(3) img { 
+  display: block;
+  width: 100%;
+  margin: 0 auto
 }
 .introduct__frist .item-text {
   position: absolute;
@@ -204,8 +210,8 @@ a:hover { opacity: .7;}
   margin: 0 auto;
   font-weight: 600;
   min-width: 80%;
-  font-size: 2.8rem;
-  line-height: 4rem;
+  font-size: 5rem;
+  line-height: 10rem;
 }
 /*---------------------------------------------------*/
 .introduct__second { 
@@ -538,7 +544,7 @@ a:hover { opacity: .7;}
   background-image: url("../../img/freething_icon.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
   width: 50%;
   height: 25rem;
 }
@@ -561,7 +567,7 @@ a:hover { opacity: .7;}
   background-color: transparent;
   position: absolute;
   bottom: -120%;
-  left: 38%;
+  left: 45%;
   font-size: 2.5rem;
   font-family: "Yu Gothic Medium";
   color: var(--colorSkyBlue);
@@ -703,7 +709,7 @@ a:hover { opacity: .7;}
 .blockFixed {
   position: fixed;
   z-index: 99;
-  bottom: 30%;
+  bottom: 10%;
   right: 2%;
   background-image: url('../../img/blockFixed_sp_pic.png');
   background-repeat: no-repeat;
